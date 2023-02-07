@@ -4,7 +4,19 @@ storage/words.txt
 ```
 
 ## Commands to install project
+
+1) Copy .env.example to .env
+2)
 ```
+./vendor/bin/sail up -d
+```
+3) Go to docker container terminal
+```
+composer install
+```
+4) Go back to system terminal
+```
+./vendor/bin/sail stop
 ./vendor/bin/sail up -d
 ./vendor/bin/sail artisan migrate
 ./vendor/bin/sail artisan insert:words
