@@ -44,10 +44,7 @@ class InsertWords extends Command
 
         $words->each(function ($word) {
             try {
-                if (Word::count()>=30) {
-                    return;
-                }
-                Word::firstOrCreate(['word'=>$word]);
+                Word::firstOrCreate(['word'=>trim($word)]);
             } catch (\Throwable $e) {
                 $this->error($e->getMessage());
             }

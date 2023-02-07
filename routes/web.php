@@ -15,4 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})
+    ->name('welcome');
+
+Route::get('/preview', function () {
+    $jsonData = \Illuminate\Support\Facades\Http::get(route('api.word'))->body();
+    $jsonDecoded = json_decode($jsonData);
+    return view('preview', compact('jsonData', 'jsonDecoded'));
+})
+    ->name('preview');
