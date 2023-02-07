@@ -14,6 +14,16 @@
 <div class="container">
 
     <section class="mt-12 p-6 shadow-md bg-white">
+        <h2 class="font-bold text-xl">"Чистый" ответ {{ route('api.word') }}:</h2>
+        <pre class="mt-4 overflow-x-scroll">{!! $jsonData !!}</pre>
+    </section>
+
+    <section class="mt-12 p-6 shadow-md bg-white">
+        <h2 class="font-bold text-xl">dump() ответ {{ route('api.word') }}:</h2>
+        <pre class="mt-4 overflow-x-scroll">@dump($jsonDecoded)</pre>
+    </section>
+
+    <section class="mt-12 p-6 shadow-md bg-white">
         <h2 class="font-bold text-xl">Полученные данные:</h2>
         <div class="mt-4 overflow-x-hidden w-full">
             <h3 class="font-bold text-lg">Слово:</h3>
@@ -33,25 +43,12 @@
                 <audio id="audio_player" src="data:audio/mp3;base64,{!! $jsonDecoded->audio !!}" controls="controls" class="w-full"></audio>
             </div>
         </div>
-        <div class="mt-4 overflow-x-hidden w-full">
-        </div>
     </section>
 
 
     <section class="mt-12">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 type="button" onclick="window.location.reload();">Обновить</button>
-    </section>
-
-
-    <section class="mt-12 p-6 shadow-md bg-white">
-        <h2 class="font-bold text-xl">"Чистый" ответ {{ route('api.word') }}:</h2>
-        <pre class="mt-4 overflow-x-scroll">{!! $jsonData !!}</pre>
-    </section>
-
-    <section class="mt-12 p-6 shadow-md bg-white">
-        <h2 class="font-bold text-xl">dump() ответ {{ route('api.word') }}:</h2>
-        <pre class="mt-4 overflow-x-scroll">@dump($jsonDecoded)</pre>
     </section>
 </div>
 

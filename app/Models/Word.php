@@ -26,7 +26,11 @@ class Word extends Model
 
     public function getAudioAttribute(): string
     {
+
+        //return 'data:audio/mp3;base64,'.$this->sound_base64;
+
         return $this->sound_base64;
+
     }
 
     public function getImageAttribute(): string
