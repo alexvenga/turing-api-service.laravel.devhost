@@ -14,7 +14,7 @@ docker-compose up -d
 ```
 composer install
 chmod -R 777 storage
-chmod -R bootstrap/cache
+chmod -R 777 bootstrap/cache
 ```
 4) Go back to system terminal
 ```
