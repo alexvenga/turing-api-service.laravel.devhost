@@ -6,21 +6,21 @@ use App\Models\Word;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
-class InsertWords extends Command
+class LoadSounds extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'insert:words';
+    protected $signature = 'load:sounds';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Insert words from data/words.txt file';
+    protected $description = 'Load sounds from YandexSpeechKit';
 
     /**
      * Create a new command instance.

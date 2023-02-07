@@ -1,10 +1,10 @@
 ## Words list
 ```
-data/words.txt
+storage/words.txt
 ```
 
 ## Commands to install project
 ```
-artisan migrate
-artisan insert:words
+php artisan migrate
+php artisan insert:words
 ```

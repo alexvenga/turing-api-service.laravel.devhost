@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'yandex' => [
+        'authorization_header' => env('YANDEX_AUTHORIZATION_HEADER', null),
+        'folder_id' => env('YANDEX_AUTHORIZATION_FOLDER_ID', null),
+    ],
+
 ];
