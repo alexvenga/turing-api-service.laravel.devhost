@@ -19,6 +19,7 @@ Route::get('/', function () {
     ->name('welcome');
 
 Route::get('/preview', function () {
+    dd(route('api.word'));
     $jsonData = \Illuminate\Support\Facades\Http::get(route('api.word'))->body();
     $jsonDecoded = json_decode($jsonData);
     return view('preview', compact('jsonData', 'jsonDecoded'));
