@@ -5,6 +5,8 @@ storage/words.txt
 
 ## Commands to install project
 ```
-php artisan migrate
-php artisan insert:words
+./vendor/bin/sail up -d
+./vendor/bin/sail artisan migrate
+./vendor/bin/sail artisan insert:words
+./vendor/bin/sail artisan insert:words
 ```
