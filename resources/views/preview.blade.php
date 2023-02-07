@@ -18,24 +18,29 @@
         <div class="mt-4 overflow-x-hidden w-full">
             <h3 class="font-bold text-lg">Слово:</h3>
             <div>
-                {!! $jsonDecoded['text'] !!}
+                {!! $jsonDecoded->text !!}
             </div>
         </div>
         <div class="mt-4 overflow-x-hidden w-full">
-            <h3 class="font-bold text-lg">Изображение:</h3>
+            <h3 class="font-bold text-lg">Изображение (jpeg):</h3>
             <div>
-                {!! $jsonDecoded['text'] !!}
+                <img src="data:image/jpeg;base64,{!! $jsonDecoded->image !!}" class="max-w-full h-auto" alt="{!! $jsonDecoded->text !!}">
             </div>
         </div>
         <div class="mt-4 overflow-x-hidden w-full">
             <h3 class="font-bold text-lg">Аудио:</h3>
             <div>
-                {!! $jsonDecoded['text'] !!}
+                <audio id="audio_player" src="data:audio/mp3;base64,{!! $jsonDecoded->audio !!}" controls="controls" class="w-full"></audio>
             </div>
         </div>
         <div class="mt-4 overflow-x-hidden w-full">
-            <audio id="audio_player" src="{!! $jsonDecoded['audio'] !!}" controls="controls" class="w-full"></audio>
         </div>
+    </section>
+
+
+    <section class="mt-12">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                type="button" onclick="window.location.reload();">Обновить</button>
     </section>
 
 
