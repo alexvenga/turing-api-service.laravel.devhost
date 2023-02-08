@@ -8,7 +8,7 @@ storage/words.txt
 1) Copy .env.example to .env
 2)
 ```
-./vendor/bin/sail up -d
+docker-compose up -d
 ```
 3) Go to docker container terminal
 ```
@@ -18,7 +18,7 @@ chmod -R 777 bootstrap/cache
 ```
 4) Go back to system terminal
 ```
-./vendor/bin/sail stop
+docker-compose stop
 ./vendor/bin/sail up -d
 ./vendor/bin/sail artisan migrate
 ./vendor/bin/sail artisan insert:words
